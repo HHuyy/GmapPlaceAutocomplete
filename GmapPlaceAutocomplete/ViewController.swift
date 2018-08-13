@@ -32,7 +32,9 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("\(place.name)")
         print("\(place.formattedAddress ?? "")")
-        print("\(String(describing: place.attributions))")
+//        print("\(String(describing: place.attributions))")
+        print("\(place.coordinate.latitude)")
+        print("\(place.coordinate.longitude)")
         dismiss(animated: true, completion: nil)
     }
     
